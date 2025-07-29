@@ -1,0 +1,968 @@
+{
+    "destinations": [
+        {
+            "value": 2,
+            "text": "Africa",
+            "popular": true,
+            "popularityScore": 15,
+            "country": [
+                {
+                    "value": "EG",
+                    "text": "Egypt",
+                    "popular": true,
+                    "popularityScore": 91,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 1371,
+                                    "text": "AmaDahlia"
+                                },
+                                {
+                                    "value": 1537,
+                                    "text": "AmaLilia"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 723,
+                                    "text": "River Tosca"
+                                },
+                                {
+                                    "value": 1243,
+                                    "text": "S.S. Sphinx"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "value": 1,
+            "text": "Europe",
+            "popular": true,
+            "popularityScore": 19,
+            "country": [
+                {
+                    "value": "AT",
+                    "text": "Austria",
+                    "popular": true,
+                    "popularityScore": 97,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 703,
+                                    "text": "AmaBella"
+                                },
+                                {
+                                    "value": 1097,
+                                    "text": "AmaLea"
+                                },
+                                {
+                                    "value": 1114,
+                                    "text": "AmaMagna"
+                                },
+                                {
+                                    "value": 1112,
+                                    "text": "AmaMora"
+                                },
+                                {
+                                    "value": 701,
+                                    "text": "AmaReina"
+                                },
+                                {
+                                    "value": 706,
+                                    "text": "AmaSonata"
+                                },
+                                {
+                                    "value": 696,
+                                    "text": "Amaverde"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 719,
+                                    "text": "River Duchess"
+                                },
+                                {
+                                    "value": 730,
+                                    "text": "River princess"
+                                },
+                                {
+                                    "value": 1116,
+                                    "text": "S.S. Beatrice"
+                                },
+                                {
+                                    "value": 728,
+                                    "text": "S.S. Maria Theresa"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 59,
+                            "text": "Viking River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 687,
+                                    "text": "Viking Vidar"
+                                },
+                                {
+                                    "value": 678,
+                                    "text": "Viking Vili"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "BE",
+                    "text": "Belgium",
+                    "popular": true,
+                    "popularityScore": 86,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 712,
+                                    "text": "AmaStella"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 1608,
+                                    "text": "S.S. Victoria"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 59,
+                            "text": "Viking River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 672,
+                                    "text": "Viking Kvasir"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "BG",
+                    "text": "Bulgaria",
+                    "popular": true,
+                    "popularityScore": 89,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 703,
+                                    "text": "AmaBella"
+                                },
+                                {
+                                    "value": 696,
+                                    "text": "Amaverde"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 730,
+                                    "text": "River princess"
+                                },
+                                {
+                                    "value": 1116,
+                                    "text": "S.S. Beatrice"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "HR",
+                    "text": "Croatia",
+                    "popular": true,
+                    "popularityScore": 82,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 703,
+                                    "text": "AmaBella"
+                                },
+                                {
+                                    "value": 696,
+                                    "text": "Amaverde"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 730,
+                                    "text": "River princess"
+                                },
+                                {
+                                    "value": 1116,
+                                    "text": "S.S. Beatrice"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "FR",
+                    "text": "France",
+                    "popular": true,
+                    "popularityScore": 99,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 707,
+                                    "text": "AmaCello"
+                                },
+                                {
+                                    "value": 697,
+                                    "text": "AmaCerto"
+                                },
+                                {
+                                    "value": 702,
+                                    "text": "AmaDante"
+                                },
+                                {
+                                    "value": 715,
+                                    "text": "AmaDolce"
+                                },
+                                {
+                                    "value": 838,
+                                    "text": "AmaKristina"
+                                },
+                                {
+                                    "value": 1358,
+                                    "text": "AmaLucia"
+                                },
+                                {
+                                    "value": 699,
+                                    "text": "AmaLyra"
+                                },
+                                {
+                                    "value": 704,
+                                    "text": "AmaPrima"
+                                },
+                                {
+                                    "value": 713,
+                                    "text": "AmaSerena"
+                                },
+                                {
+                                    "value": 1247,
+                                    "text": "AmaSiena"
+                                },
+                                {
+                                    "value": 712,
+                                    "text": "AmaStella"
+                                },
+                                {
+                                    "value": 846,
+                                    "text": "AmaVenita"
+                                },
+                                {
+                                    "value": 705,
+                                    "text": "AmaViola"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 732,
+                                    "text": "S.S. Antoinette"
+                                },
+                                {
+                                    "value": 734,
+                                    "text": "S.S. Bon Voyage"
+                                },
+                                {
+                                    "value": 1607,
+                                    "text": "S.S. Elisabeth"
+                                },
+                                {
+                                    "value": 845,
+                                    "text": "S.S. Joie De Vivre"
+                                },
+                                {
+                                    "value": 1242,
+                                    "text": "S.S. Sao Gabriel"
+                                },
+                                {
+                                    "value": 1608,
+                                    "text": "S.S. Victoria"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 59,
+                            "text": "Viking River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 1252,
+                                    "text": "Viking Fjorgyn"
+                                },
+                                {
+                                    "value": 1629,
+                                    "text": "Viking Nerthus"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "HU",
+                    "text": "Hungary",
+                    "popular": true,
+                    "popularityScore": 95,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 703,
+                                    "text": "AmaBella"
+                                },
+                                {
+                                    "value": 1097,
+                                    "text": "AmaLea"
+                                },
+                                {
+                                    "value": 1114,
+                                    "text": "AmaMagna"
+                                },
+                                {
+                                    "value": 1112,
+                                    "text": "AmaMora"
+                                },
+                                {
+                                    "value": 701,
+                                    "text": "AmaReina"
+                                },
+                                {
+                                    "value": 706,
+                                    "text": "AmaSonata"
+                                },
+                                {
+                                    "value": 696,
+                                    "text": "Amaverde"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 719,
+                                    "text": "River Duchess"
+                                },
+                                {
+                                    "value": 730,
+                                    "text": "River princess"
+                                },
+                                {
+                                    "value": 1116,
+                                    "text": "S.S. Beatrice"
+                                },
+                                {
+                                    "value": 728,
+                                    "text": "S.S. Maria Theresa"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 59,
+                            "text": "Viking River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 687,
+                                    "text": "Viking Vidar"
+                                },
+                                {
+                                    "value": 678,
+                                    "text": "Viking Vili"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "IT",
+                    "text": "Italy",
+                    "popular": true,
+                    "popularityScore": 83,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 1241,
+                                    "text": "S.S. La Venezia"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "NL",
+                    "text": "Netherlands",
+                    "popular": true,
+                    "popularityScore": 98,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 697,
+                                    "text": "AmaCerto"
+                                },
+                                {
+                                    "value": 1358,
+                                    "text": "AmaLucia"
+                                },
+                                {
+                                    "value": 704,
+                                    "text": "AmaPrima"
+                                },
+                                {
+                                    "value": 713,
+                                    "text": "AmaSerena"
+                                },
+                                {
+                                    "value": 1247,
+                                    "text": "AmaSiena"
+                                },
+                                {
+                                    "value": 712,
+                                    "text": "AmaStella"
+                                },
+                                {
+                                    "value": 705,
+                                    "text": "AmaViola"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 719,
+                                    "text": "River Duchess"
+                                },
+                                {
+                                    "value": 730,
+                                    "text": "River princess"
+                                },
+                                {
+                                    "value": 732,
+                                    "text": "S.S. Antoinette"
+                                },
+                                {
+                                    "value": 1607,
+                                    "text": "S.S. Elisabeth"
+                                },
+                                {
+                                    "value": 1608,
+                                    "text": "S.S. Victoria"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 59,
+                            "text": "Viking River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 672,
+                                    "text": "Viking Kvasir"
+                                },
+                                {
+                                    "value": 687,
+                                    "text": "Viking Vidar"
+                                },
+                                {
+                                    "value": 678,
+                                    "text": "Viking Vili"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "PT",
+                    "text": "Portugal",
+                    "popular": true,
+                    "popularityScore": 94,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 1113,
+                                    "text": "AmaDouro"
+                                },
+                                {
+                                    "value": 1601,
+                                    "text": "AmaSintra"
+                                },
+                                {
+                                    "value": 700,
+                                    "text": "AmaVida"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 734,
+                                    "text": "S.S. Bon Voyage"
+                                },
+                                {
+                                    "value": 1242,
+                                    "text": "S.S. Sao Gabriel"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "RO",
+                    "text": "Romania",
+                    "popular": true,
+                    "popularityScore": 90,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 730,
+                                    "text": "River princess"
+                                },
+                                {
+                                    "value": 1116,
+                                    "text": "S.S. Beatrice"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "RS",
+                    "text": "Serbia",
+                    "popular": true,
+                    "popularityScore": 87,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 703,
+                                    "text": "AmaBella"
+                                },
+                                {
+                                    "value": 696,
+                                    "text": "Amaverde"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 730,
+                                    "text": "River princess"
+                                },
+                                {
+                                    "value": 1116,
+                                    "text": "S.S. Beatrice"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "SK",
+                    "text": "Slovakia",
+                    "popular": true,
+                    "popularityScore": 88,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 703,
+                                    "text": "AmaBella"
+                                },
+                                {
+                                    "value": 1097,
+                                    "text": "AmaLea"
+                                },
+                                {
+                                    "value": 1114,
+                                    "text": "AmaMagna"
+                                },
+                                {
+                                    "value": 1112,
+                                    "text": "AmaMora"
+                                },
+                                {
+                                    "value": 701,
+                                    "text": "AmaReina"
+                                },
+                                {
+                                    "value": 706,
+                                    "text": "AmaSonata"
+                                },
+                                {
+                                    "value": 696,
+                                    "text": "Amaverde"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 728,
+                                    "text": "S.S. Maria Theresa"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "ES",
+                    "text": "Spain",
+                    "popular": true,
+                    "popularityScore": 84,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 1113,
+                                    "text": "AmaDouro"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "CH",
+                    "text": "Switzerland",
+                    "popular": true,
+                    "popularityScore": 96,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 697,
+                                    "text": "AmaCerto"
+                                },
+                                {
+                                    "value": 1358,
+                                    "text": "AmaLucia"
+                                },
+                                {
+                                    "value": 704,
+                                    "text": "AmaPrima"
+                                },
+                                {
+                                    "value": 713,
+                                    "text": "AmaSerena"
+                                },
+                                {
+                                    "value": 1247,
+                                    "text": "AmaSiena"
+                                },
+                                {
+                                    "value": 712,
+                                    "text": "AmaStella"
+                                },
+                                {
+                                    "value": 846,
+                                    "text": "AmaVenita"
+                                },
+                                {
+                                    "value": 705,
+                                    "text": "AmaViola"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 732,
+                                    "text": "S.S. Antoinette"
+                                },
+                                {
+                                    "value": 1607,
+                                    "text": "S.S. Elisabeth"
+                                },
+                                {
+                                    "value": 1608,
+                                    "text": "S.S. Victoria"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "value": 5,
+            "text": "India",
+            "popular": true,
+            "popularityScore": 16,
+            "country": [
+                {
+                    "value": "IN",
+                    "text": "India",
+                    "popular": true,
+                    "popularityScore": 85,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 727,
+                                    "text": "Ganges Voyager II"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "PK",
+                    "text": "Pakistan",
+                    "popular": true,
+                    "popularityScore": 74,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 727,
+                                    "text": "Ganges Voyager II"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "value": 17,
+            "text": "South America",
+            "popular": true,
+            "popularityScore": 17,
+            "country": [
+                {
+                    "value": "CO",
+                    "text": "Colombia",
+                    "popular": true,
+                    "popularityScore": 80,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 1599,
+                                    "text": "AmaMagdalena"
+                                },
+                                {
+                                    "value": 1600,
+                                    "text": "AmaMelodia"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "PE",
+                    "text": "Peru",
+                    "popular": true,
+                    "popularityScore": 81,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 1373,
+                                    "text": "Aria Amazon"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "value": 3,
+            "text": "Southeast Asia",
+            "popular": true,
+            "popularityScore": 18,
+            "country": [
+                {
+                    "value": "KH",
+                    "text": "Cambodia",
+                    "popular": true,
+                    "popularityScore": 92,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 711,
+                                    "text": "AmaDara"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 1249,
+                                    "text": "Mekong Jewel"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "IN",
+                    "text": "India",
+                    "popular": true,
+                    "popularityScore": 85,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 727,
+                                    "text": "Ganges Voyager II"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": "VN",
+                    "text": "Vietnam",
+                    "popular": true,
+                    "popularityScore": 93,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 70,
+                            "text": "AmaWaterways",
+                            "RiverShips": [
+                                {
+                                    "value": 711,
+                                    "text": "AmaDara"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 83,
+                            "text": "Uniworld River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 1249,
+                                    "text": "Mekong Jewel"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "value": 15,
+            "text": "U. S. River",
+            "popular": true,
+            "popularityScore": 20,
+            "country": [
+                {
+                    "value": "US",
+                    "text": "United States",
+                    "popular": true,
+                    "popularityScore": 100,
+                    "cruiseRiverLines": [
+                        {
+                            "value": 59,
+                            "text": "Viking River Cruises",
+                            "RiverShips": [
+                                {
+                                    "value": 1372,
+                                    "text": "Viking Mississippi"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

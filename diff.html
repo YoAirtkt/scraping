@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ocean Data Difference</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <button id="btn">Click to Compare</button>
+
+    <script>
+      // --- Flattening functions for old data structure ---
+      function flattenOldDestinations(oldDestinations) {
+        return oldDestinations.map(d => ({
+          id: String(d.value),
+          label: d.text
+        }));
+      }
+      function flattenOldPorts(oldDestinations) {
+        return oldDestinations.flatMap(dest =>
+          (dest.ports || []).map(port => ({
+            id: String(port.value),
+            label: port.text
+          }))
+        );
+      }
+      function flattenOldCruiseLines(oldDestinations) {
+        return oldDestinations.flatMap(dest =>
+          (dest.ports || []).flatMap(port =>
+            (port.cruiseLines || []).map(line => ({
+              id: String(line.value),
+              label: line.text
+            }))
+          )
+        );
+      }
+      function flattenOldShips(oldDestinations) {
+        return oldDestinations.flatMap(dest =>
+          (dest.ports || []).flatMap(port =>
+            (port.cruiseLines || []).flatMap(line =>
+              (line.ships || []).map(ship => ({
+                id: String(ship.value),
+                label: ship.text
+              }))
+            )
+          )
+        );
+      }
+      // --- Compare by id ---
+      function getOnlyNewItems(oldArr, newArr) {
+        const oldIds = new Set(oldArr.map(item => String(item.id)));
+        return newArr.filter(item => !oldIds.has(String(item.id)));
+      }
+      function displayResults(label, data) {
+        const output = document.getElementById("output");
+        const section = document.createElement("div");
+        section.innerHTML = `<strong>${label}</strong><pre>${JSON.stringify(
+          data,
+          null,
+          2
+        )}</pre><hr/>`;
+        output.appendChild(section);
+      }
+
+      async function processData() {
+        // Load old data
+        const oldRes = await fetch("./oldOceanData.json");
+        const olddata = await oldRes.json();
+
+        // Flatten old data
+        const oldDestinationsFlat = flattenOldDestinations(olddata.destinations);
+        const oldPortsFlat = flattenOldPorts(olddata.destinations);
+        const oldCruiseLinesFlat = flattenOldCruiseLines(olddata.destinations);
+        const oldShipsFlat = flattenOldShips(olddata.destinations);
+
+        // Load new data
+        const newRes = await fetch("./newocean.json");
+        const newdata = await newRes.json();
+
+        // Compare and filter
+        const newDestinations = getOnlyNewItems(oldDestinationsFlat, newdata.destination);
+        const newPorts = getOnlyNewItems(oldPortsFlat, newdata.departure_port);
+        const newCruiseLines = getOnlyNewItems(oldCruiseLinesFlat, newdata.cruise_line);
+        const newShips = getOnlyNewItems(oldShipsFlat, newdata.cruise_ship);
+
+        // Display
+        displayResults("🆕 New Destinations", newDestinations);
+        displayResults("🛳️ New Departure Ports", newPorts);
+        displayResults("🚢 New Cruise Lines", newCruiseLines);
+        displayResults("⛴️ New Cruise Ships", newShips);
+      }
+
+      document.getElementById("btn").addEventListener("click", processData);
+    </script>
+  </body>
+</html>

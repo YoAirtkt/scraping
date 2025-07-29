@@ -5,7 +5,7 @@ const fs = require('fs'); // Moved fs import to the top
     const browser = await chromium.launch({ headless: false }); // set to true later for production
     const page = await browser.newPage();
 
-    const url = 'https://cruise.airtkt.com/app/0/cruise/0/search.html?clear=all';
+    const url = 'https://cruise.airtkt.com/app/0/river_cruise/0/search.html?clear=all';
 
     try {
         console.log(`Navigating to ${url}...`);
@@ -43,25 +43,36 @@ const fs = require('fs'); // Moved fs import to the top
             await page.waitForTimeout(1200);
 
             // Get all items, filtering out 'Select All' and 'heading-group'
-            let newItems = await page.evaluate((selector) => {
-                const list = document.querySelector(selector);
-                if (!list) return [];
-                return Array.from(list.querySelectorAll('li'))
-                    .filter(li => !li.classList.contains('select-all') && !li.classList.contains('heading-group'))
-                    .map(li => {
-                        const labelElement = li.querySelector('label');
-                        if (labelElement) {
-                            const labelText = labelElement.innerText.trim().replace(/\s+/g, ' ');
-                            const forAttribute = labelElement.getAttribute('for');
-                            // Extract the numeric ID from the 'for' attribute
-                            const idMatch = forAttribute ? forAttribute.match(/\d+$/) : null;
-                            const id = idMatch ? idMatch[0] : null;
-                            return { label: labelText, id: id };
-                        }
-                        return null; // Should not happen if filter works correctly
-                    })
-                    .filter(item => item !== null); // Remove any null entries if they somehow appear
-            }, listSelector);
+            let newItems = await page.evaluate(
+    ({ selector, clickSelector }) => {
+        const list = document.querySelector(selector);
+        if (!list) return [];
+        return Array.from(list.querySelectorAll('li'))
+            .filter(li => !li.classList.contains('select-all') && !li.classList.contains('heading-group'))
+            .map(li => {
+                const labelElement = li.querySelector('label');
+                if (labelElement) {
+                    const labelText = labelElement.innerText.trim().replace(/\s+/g, ' ');
+                    const forAttribute = labelElement.getAttribute('for');
+                    // Extract ID based on list type
+                    let id = null;
+                    if (clickSelector === '#country_codes') {
+                        // For country, extract two uppercase letters at the end
+                        const idMatch = forAttribute ? forAttribute.match(/([A-Z]{2})$/) : null;
+                        id = idMatch ? idMatch[1] : null;
+                    } else {
+                        // For others, extract numeric ID at the end
+                        const idMatch = forAttribute ? forAttribute.match(/\d+$/) : null;
+                        id = idMatch ? idMatch[0] : null;
+                    }
+                    return { label: labelText, id: id };
+                }
+                return null;
+            })
+            .filter(item => item !== null);
+    },
+    { selector: listSelector, clickSelector }
+);
 
             // Remove duplicates based on a combination of label and id
             const uniqueItems = new Map();
@@ -101,7 +112,7 @@ const fs = require('fs'); // Moved fs import to the top
     // Initialize data object
     let data = {
         "destination": [],
-        "departure_port": [],
+        "country": [],
         "cruise_line": [],
         "cruise_ship": []
     };
@@ -109,40 +120,40 @@ const fs = require('fs'); // Moved fs import to the top
     console.log('Scraping Destinations...');
     try {
         data.destination = await scrapeList('#destination_ids', 'div[data-serving="search[destination_ids]"] .selection-list-results-list');
-        fs.writeFileSync('newocean.json', JSON.stringify(data, null, 2), 'utf-8');
+        fs.writeFileSync('newriver.json', JSON.stringify(data, null, 2), 'utf-8');
         console.log('Destinations saved to JSON');
     } catch (error) {
         console.log('Error scraping destinations:', error.message);
     }
 
-    console.log('Scraping Cruise Lines...');
+    console.log('Scraping Countries...');
+    try {
+        data.country = await scrapeList('#country_codes', 'div[data-serving="search[country_codes]"] .selection-list-results-list');
+        fs.writeFileSync('newriver.json', JSON.stringify(data, null, 2), 'utf-8');
+        console.log('Countries saved to JSON');
+    } catch (error) {
+        console.log('Error scraping countries:', error.message);
+    }
+
+    console.log('Scraping Cruise line...');
     try {
         data.cruise_line = await scrapeList('#vendor_ids', 'div[data-serving="search[vendor_ids]"] .selection-list-results-list');
-        fs.writeFileSync('newocean.json', JSON.stringify(data, null, 2), 'utf-8');
-        console.log('Cruise Lines saved to JSON');
+        fs.writeFileSync('newriver.json', JSON.stringify(data, null, 2), 'utf-8');
+        console.log('Cruise line saved to JSON');
     } catch (error) {
-        console.log('Error scraping cruise lines:', error.message);
+        console.log('Error scraping cruise line:', error.message);
     }
 
-    console.log('Scraping Cruise Ships...');
+    console.log('Scraping Cruise Ship...');
     try {
         data.cruise_ship = await scrapeList('#ship_ids', 'div[data-serving="search[ship_ids]"] .selection-list-results-list');
-        fs.writeFileSync('newocean.json', JSON.stringify(data, null, 2), 'utf-8');
-        console.log('Cruise Ships saved to JSON');
+        fs.writeFileSync('newriver.json', JSON.stringify(data, null, 2), 'utf-8');
+        console.log('Cruise Ship saved to JSON');
     } catch (error) {
-        console.log('Error scraping cruise ships:', error.message);
+        console.log('Error scraping cruise ship:', error.message);
     }
 
-    console.log('Scraping Departure Ports...');
-    try {
-        data.departure_port = await scrapeList('#departure_port_ids', 'div[data-serving="search[departure_port_ids]"] .selection-list-results-list');
-        fs.writeFileSync('newocean.json', JSON.stringify(data, null, 2), 'utf-8');
-        console.log('Departure Ports saved to JSON');
-    } catch (error) {
-        console.log('Error scraping departure ports:', error.message);
-    }
-
-    console.log('All data successfully saved to newocean.json');
+    console.log('All data successfully saved to newriver.json');
 
     await browser.close();
     console.log('Browser closed.');
